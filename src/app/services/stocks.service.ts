@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 let stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
-let service: string  = 'https://angular2-in-action-api.herokuapp.com';
+let service: string = 'https://angular2-in-action-api.herokuapp.com';
 
 export interface StockInterface {
   symbol: string;
@@ -11,9 +11,7 @@ export interface StockInterface {
   changeInPercent: number;
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class StocksService {
   constructor(private http: HttpClient) { }
 
